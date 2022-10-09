@@ -7,10 +7,12 @@ import { MatSidenavModule }     from '@angular/material/sidenav';
 import { MatButtonModule }      from "@angular/material/button";
 import { MatListModule }        from "@angular/material/list";
 import { MatIconModule }        from "@angular/material/icon";
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

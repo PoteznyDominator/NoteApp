@@ -1,27 +1,5 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-sidenav mode="side" opened="true">
-    <mat-nav-list>
-      <mat-list-item (click)="isExpanded = !isExpanded">
-        <mat-icon class="chevron-button" [ngClass]="isExpanded ? 'chevron-rotate' : ''">
-          chevron_right
-        </mat-icon>
-      </mat-list-item>
-
-      <mat-list-item (click)="isExpanded = !isExpanded">
-        <mat-icon>home</mat-icon>
-        <span *ngIf="isExpanded" class="menu-item">Dashboard</span>
-      </mat-list-item>
-
-      <mat-list-item>
-        <mat-icon mat-list-icon>important_devices</mat-icon>
-        <span *ngIf="isExpanded" class="menu-item">Info</span>
-      </mat-list-item>
-
-      <mat-list-item>
-        <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <span *ngIf="isExpanded" class="menu-item">User</span>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
-
-</mat-drawer-container>
+<mat-sidenav-container class="example-container" autosize>
+  <app-dashboard></app-dashboard>
+<!--  <mat-sidenav-content>-->
+<!--  </mat-sidenav-content>-->
+</mat-sidenav-container>
