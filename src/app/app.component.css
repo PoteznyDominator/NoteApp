@@ -1,4 +1,5 @@
 .example-container {
+  padding: 0;
   width: 100%;
   height: 100%;
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -7,12 +8,19 @@
 .chevron-button {
   transition: 300ms ease-in-out;
   transform: rotate(0deg);
+  right: 15px;
+  float: right;
+  position: absolute;
 }
 
-.chevron-rotate {
+.chevron-button.rotated {
   transform: rotate(180deg);
 }
 
 .menu-item {
   margin-left: 8px;
+}
+
+mat-sidenav-content {
+  overflow: hidden;
 }
