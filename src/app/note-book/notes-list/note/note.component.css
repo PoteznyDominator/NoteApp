@@ -1,0 +1,33 @@
+:host {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-container {
+  margin-right: 10px;
+}
+
+.text-container p {
+  margin: 2px;
+}
+
+.note-title {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.note-desc {
+  display: -webkit-box;
+  max-width: 145px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #808080;
+  font-size: 14px;
+  font-weight: 300;
+}

@@ -1,0 +1,7 @@
+<h2 matSubheader>Example NoteBook</h2>
+<mat-nav-list>
+  <mat-list-item *ngFor="let note of notes" class="note-list-item">
+    <app-note [note]="note"></app-note>
+  </mat-list-item>
+</mat-nav-list>
+

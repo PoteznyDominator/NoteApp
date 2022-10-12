@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="text-container">
+    <p class="note-title">{{note.name}}</p>
+    <p readonly class="note-desc">{{note.description}}</p>
+  </div>
+  <img class="note-image" style="max-height: 100px;" *ngIf="note.imageURL !== ''"
+       src="{{note.imageURL}}" alt="">
+</div>
