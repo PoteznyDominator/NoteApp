@@ -1,0 +1,15 @@
+.note-list-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height: auto;
+  padding: 10px 0 10px 0;
+}
+
+.note-list-item:nth-child(even) {
+  background-color: #f5f5f5;
+
+}
+.note-list-item:nth-child(even):hover {
+  background-color: #E0E0E0;
+}
+
+
