@@ -1,0 +1,12 @@
+<div class="container">
+  <button class="resize-button" (click)="onOpenClicked()" mat-flat-button>
+    <mat-icon class="resize-icon" [ngClass]="{rotated: !noteBookService.isOpened}">
+      chevron_left
+    </mat-icon>
+  </button>
+  <h1>{{noteTitle}}</h1>
+  <div class="functional-buttons">
+    <button mat-raised-button color="primary">share</button>
+    <button mat-raised-button color="primary">...</button>
+  </div>
+</div>

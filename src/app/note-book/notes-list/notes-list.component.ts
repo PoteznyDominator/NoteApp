@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NoteModel }         from './note/note.model';
+import { NoteModel }         from '../../shared/note.model';
+import { NotesService }      from '../../shared/notes.service';
 
 @Component({
   selector:    'app-notes-list',
@@ -8,21 +9,16 @@ import { NoteModel }         from './note/note.model';
 })
 export class NotesListComponent implements OnInit {
 
-  notes: NoteModel[] = [{
-    id: 1, name: 'Shopping list', description: 'list with important stuff', imageURL: '',
-  }, {
-    id:       1, name: 'dadasdas', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad amet debitis eveniet facere fuga\n' +
-                                                '  ratione repudiandae ullam velit voluptatum! Ab amet doloribus est id laboriosam, minima molestiae\n' +
-                                                '  provident unde.',
-    imageURL: 'https://picsum.photos/200/300',
-  }, {
-    id: 1, name: 'dadasdas', description: 'aasasdd', imageURL: 'https://picsum.photos/200/300',
-  }];
+  notes: NoteModel[];
 
-  constructor() {
+  constructor(private notesService: NotesService) {
   }
 
   ngOnInit(): void {
+    this.notes = this.notesService.getNotes();
   }
 
+  onNoteSelected(id: number) {
+    this.notesService.onNoteSelected.emit(id);
+  }
 }
