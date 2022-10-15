@@ -1,8 +1,9 @@
-<mat-sidenav-container class="example-container" autosize>
-  <mat-sidenav mode="side" opened="true">
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer mode="side" opened="{{noteBookService.isOpened}}">
     <app-notes-list></app-notes-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-note-panel></app-note-panel>
+  </mat-drawer-content>
+</mat-drawer-container>
 
